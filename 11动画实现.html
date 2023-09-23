@@ -1,0 +1,47 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-21 14:21:03
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-21 14:24:16
+ * @FilePath: /H5C3move/11动画实现.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #0ff;
+            animation: change2 1s;
+        }
+        @keyframes change{
+            form{
+                width: 200px;
+            }
+            to{
+                width: 600px;
+            }
+        }
+        @keyframes change2{
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100%{
+                width: 800px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

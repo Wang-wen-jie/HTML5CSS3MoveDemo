@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css">
+    <style>
+        body {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+
+        .box,
+        .front,
+        .left,
+        .right,
+        .top,
+        .bottom,
+        .end {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+        }
+        .box{
+            position: relative;
+            transition: transform 2s;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .box:hover{
+            transform: rotateY(360deg);
+            /* transform: rotateX(360deg); */
+            /* transform: rotateZ(360deg); */
+        }
+        .front {
+            transform: translateZ(50px);
+            background-color: #f00;
+        }
+        .end{
+            transform: translateZ(-50px);
+            background-color: #0f0;
+        }
+        .left{
+            transform: translateX(-50px) rotateY(90deg);
+            background-color: #00f;
+        }
+        .right{
+            transform: translateX(50px) rotateY(90deg);
+            background-color: #ff0;
+        }
+        .top{
+            transform: translateY(-50px) rotateX(90deg);
+            background-color: #f0f;
+        }
+        .bottom{
+            transform: translateY(50px) rotateX(90deg);
+            background-color: #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="end"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>

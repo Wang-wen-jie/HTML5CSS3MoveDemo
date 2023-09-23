@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -5px;
+            margin-left: -60px;
+            border-radius: 2px;
+            width: 60px;
+            height: 10px;
+            background-color: #999;
+            transform-origin: right center;
+            /* 逐帧时钟 */
+            animation: run 60s steps(60) infinite;
+        }
+
+        @keyframes run {
+            form {
+                transform: rotateZ(0);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>

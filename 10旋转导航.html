@@ -1,0 +1,86 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-20 18:41:04
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-21 14:11:04
+ * @FilePath: /H5C3move/10旋转导航.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css">
+    <style>
+        .box>ul {
+            width: 600px;
+            height: 40px;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+
+        .box ul li {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            transition: all .5s;
+            transform-style: preserve-3d;
+            /* transform: rotateX(-20deg) rotateY(30deg); */
+            /* transform: scale3d(0.8,1.5,2); */
+        }
+
+        .box>ul>li>a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 200px;
+            height: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .box>ul>li>a:first-child {
+            background-color: rgb(55, 169, 47);
+            transform: translateZ(20px);
+        }
+
+        .box>ul>li>a:last-child {
+            background-color: rgb(249, 175, 64);
+            /* 旋转会改变坐标轴朝向 */
+            /* transform: rotateX(90deg) translateZ(20px); */
+            transform: translateY(-20px) rotateX(90deg);
+        }
+        .box>ul>li:hover{
+            transform: rotateX(-90deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">主页</a>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">关于我们</a>
+                <a href="#">About we</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css">
+    <style>
+        .box{
+            width: 1240px;
+            height: 500px;
+            background-image: url(./images/car-screen.png);
+            background-size: cover;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .box::before,
+        .box::after{
+            float: left;
+            content: '';
+            width: 50%;
+            height: 500px;
+            transition: all 0.5s;
+        }
+        .box::before{
+            background-image: url(./images/car-left.png);
+        }
+        .box::after{
+            background-image: url(./images/car-right.png);
+        }
+        .box:hover::before{
+            transform: translateX(-100%);
+        }
+        .box:hover::after{
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!--
+ * @Author: 3054718283@qq.com
+ * @Date: 2023-09-21 14:26:13
+ * @LastEditors: wangwenjie
+ * @LastEditTime: 2023-09-21 15:43:20
+ * @FilePath: /H5C3move/12动画.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* animation:动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕时状态 */
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 200px auto;
+        }
+
+        .main {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: cricle linear 4s infinite;
+        }
+
+        .box:hover .main {
+            animation-play-state: paused;
+        }
+
+        @keyframes cricle {
+            form {
+                /* transform: rotateX(0) rotateY(0) rotateZ(0); */
+                transform: rotateY(0);
+            }
+
+            to {
+                /* transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); */
+                transform: rotateY(360deg);
+            }
+        }
+
+        .diamond {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            /* transform-origin: right bottom; */
+            /* transform: rotateX(-20deg) rotateY(30deg); */
+            transform: rotateZ(90deg) rotateY(45deg) rotateZ(-45deg);
+
+        }
+
+        .item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            /* background-color: rgb(72, 14, 219); */
+        }
+
+        /* 上 */
+        .item:nth-child(1) {
+            background-color: rgba(246, 15, 3, .5);
+            transform: translateY(-100px) rotateX(90deg);
+        }
+
+        /* 下 */
+        .item:nth-child(2) {
+            background-color: rgba(253, 152, 2, .5);
+            transform: translateY(100px) rotateX(90deg);
+        }
+
+        /* 左 */
+        .item:nth-child(3) {
+            background-color: rgba(205, 21, 104, .5);
+            transform: translateX(-100px) rotateY(90deg);
+        }
+
+        /* 右 */
+        .item:nth-child(4) {
+            background-color: rgba(7, 246, 51, .5);
+            transform: translateX(100px) rotateY(90deg);
+        }
+
+        /* 前 */
+        .item:nth-child(5) {
+            background-color: rgba(7, 246, 234, .5);
+            transform: translateZ(100px);
+        }
+
+        /* 后 */
+        .item:nth-child(6) {
+            background-color: rgba(31, 7, 246, .5);
+            transform: translateZ(-100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="main">
+            <div class="diamond">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
