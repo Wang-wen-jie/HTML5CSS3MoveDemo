@@ -1,0 +1,14 @@
+// 1.定义变量 2.使用
+// 优势在于能够保证变量的统一改变
+@color:green;
+
+.box{
+    color:@color;
+}
+
+.father{
+    background-color: @color;
+    .son{
+        border: 1px solid @color;
+    }
+}
