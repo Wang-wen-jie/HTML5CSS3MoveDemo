@@ -1,0 +1,9 @@
+.box {
+  color: green;
+}
+.father {
+  background-color: green;
+}
+.father .son {
+  border: 1px solid green;
+}
